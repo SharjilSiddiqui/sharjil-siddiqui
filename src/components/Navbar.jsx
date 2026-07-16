@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
+function Navbar({ setShowExperience, setShowSkills, setShowContact, setShowProjects }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +14,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
   }, []);
 
   const navLinks = [
+    { name: "Experience", id: "experience", onClick: () => setShowExperience(true) },
     { name: "Skills", id: "skills", onClick: () => setShowSkills(true) },
     { name: "Projects", id: "projects", onClick: () => setShowProjects(true) },
     { name: "Contact", id: "contact", onClick: () => setShowContact(true) }
@@ -31,20 +31,20 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
                   }`}
     >
       <div
-        className={`relative bg-gradient-to-br from-black via-slate-950 to-black
-                    backdrop-blur-xl border border-sky-500/30 rounded-3xl
-                    shadow-lg shadow-sky-500/10 transition-all duration-500
+        className={`relative bg-white/80
+                    backdrop-blur-xl border border-slate-200 rounded-3xl
+                    shadow-lg shadow-slate-200/70 transition-all duration-500
                     ${scrolled ? "py-3 px-4" : "py-4 px-6"}`}
       >
         {/* Glow Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-500/5 via-transparent to-sky-500/5 rounded-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/70 via-white/40 to-blue-100/70 rounded-3xl pointer-events-none" />
 
         <div className="relative flex items-center justify-between">
           {/* Logo */}
           <motion.h1
             whileHover={{ scale: 1.05 }}
-            className="text-white text-xl sm:text-2xl md:text-3xl font-bold font-sans
-                       bg-gradient-to-r from-white via-sky-200 to-white bg-clip-text text-transparent
+            className="text-xl sm:text-2xl md:text-3xl font-bold font-sans
+                       bg-gradient-to-r from-slate-950 via-sky-600 to-slate-950 bg-clip-text text-transparent
                        cursor-pointer select-none"
           >
             Portfolio
@@ -62,7 +62,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
                     link.onClick();
                   }
                 }}
-                className="relative px-4 py-2 text-white font-medium text-base lg:text-lg
+                className="relative px-4 py-2 text-slate-700 font-medium text-base lg:text-lg
                            transition-colors duration-300 group cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -81,7 +81,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
 
                 {/* Glow Effect */}
                 <motion.span
-                  className="absolute inset-0 bg-sky-500/10 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-sky-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                 />
@@ -91,7 +91,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
 
           {/* Mobile Hamburger */}
           <motion.button
-            className="md:hidden relative z-10 p-2 text-white focus:outline-none"
+            className="md:hidden relative z-10 p-2 text-slate-900 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
@@ -100,17 +100,17 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
               <motion.span
                 animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-0.5 bg-white rounded-full origin-center"
+                className="w-full h-0.5 bg-slate-900 rounded-full origin-center"
               />
               <motion.span
                 animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="w-full h-0.5 bg-white rounded-full"
+                className="w-full h-0.5 bg-slate-900 rounded-full"
               />
               <motion.span
                 animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-0.5 bg-white rounded-full origin-center"
+                className="w-full h-0.5 bg-slate-900 rounded-full origin-center"
               />
             </div>
           </motion.button>
@@ -130,7 +130,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
                 initial={{ y: -20 }}
                 animate={{ y: 0 }}
                 exit={{ y: -20 }}
-                className="pt-4 mt-4 border-t border-sky-500/30 space-y-1"
+                className="pt-4 mt-4 border-t border-slate-200 space-y-1"
               >
                 {navLinks.map((link, index) => (
                   <motion.a
@@ -146,8 +146,8 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    className="block px-4 py-3 text-white text-lg font-medium
-                               hover:bg-sky-500/10 hover:text-sky-400 rounded-xl
+                    className="block px-4 py-3 text-slate-700 text-lg font-medium
+                               hover:bg-sky-50 hover:text-sky-600 rounded-xl
                                transition-all duration-300 cursor-pointer"
                     whileTap={{ scale: 0.98 }}
                   >
@@ -161,7 +161,7 @@ function Navbar({ setShowSkills, setShowContact, setShowProjects }) {
       </div>
 
       {/* Bottom Glow Bar */}
-      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
+      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
     </motion.nav>
   );
 }

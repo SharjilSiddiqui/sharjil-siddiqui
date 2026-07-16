@@ -1,0 +1,59 @@
+Sharjil Siddiqui
+Frontend Engineer Intern
+
+Email: sharjilsidd187@gmail.com
+Phone: +91 9552190178
+GitHub: https://github.com/SharjilSiddiqui
+LinkedIn: https://linkedin.com/in/sharjil-siddiqui-5b96982b1/
+
+SUMMARY
+Frontend Engineer Intern with experience building and testing production SaaS applications. Skilled in React, Vue/Nuxt, JavaScript, Tailwind CSS, REST APIs, QA validation, and modern remote engineering workflows.
+
+EDUCATION
+B.Tech in AI & Data Science
+
+EXPERIENCE
+Frontend Engineer Intern
+Aortem Inc. - Remote
+
+- Contributed to frontend development across SaaS products including DartCloudFunctions, DartCodeAI, DartStream, IntelliToggle, and TechniDox.
+- Built responsive user interfaces using React, Vue/Nuxt, JavaScript, and Tailwind CSS.
+- Integrated REST APIs, authentication flows, feature flags, and admin dashboard functionality.
+- Collaborated with backend engineers through GitLab merge requests and issue tracking.
+- Performed QA validation using browser DevTools, cURL, API testing, and regression testing before production releases.
+- Worked with senior engineers and product leadership in a remote international team.
+
+QA & RELEASE VERIFICATION
+- Verified production fixes across enterprise SaaS applications.
+- Tested APIs using cURL and browser DevTools.
+- Validated GitLab issues against implemented fixes.
+- Performed regression testing before releases.
+- Prepared detailed QA comments and verification reports.
+
+PROJECTS
+DartCloudFunctions
+Enterprise serverless cloud platform where I contributed to frontend features, authentication flows, deployment interfaces, project management, and runtime configuration.
+
+DartCodeAI
+AI platform where I contributed to frontend functionality, QA validation, and feature verification for enterprise AI workflows.
+
+IntelliToggle
+Feature flag management platform with work involving admin dashboards, RBAC, and API integration.
+
+DartStream
+Worked on dashboard improvements, frontend implementation, QA verification, and issue validation.
+
+Pawthway - Pet Adoption Platform
+Responsive React, Tailwind CSS, Firebase, and Framer Motion application with role-based authentication, real-time data, and shelter listing management.
+
+Crypto Dashboard
+Responsive cryptocurrency dashboard with real-time market data, SSR pages, charts, and MetaMask wallet connection.
+
+AI Notes Summarizer
+Streamlit and NLP application for extracting and summarizing uploaded PDF notes.
+
+SKILLS
+Frontend: React, Vue, Nuxt, Next.js, JavaScript, TypeScript, Tailwind CSS
+Backend: Node.js, Firebase, REST APIs, PostgreSQL, MongoDB
+Testing: API Testing, QA, Regression Testing, Postman, cURL
+Tools: Git, GitHub, GitLab, Vite, VS Code
