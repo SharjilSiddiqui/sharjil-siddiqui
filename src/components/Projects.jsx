@@ -30,7 +30,7 @@ function Projects({ setShowProjects }) {
     },
     {
       title: "DartCloudFunctions",
-      tech: "React, Tailwind CSS, REST APIs, Firebase",
+      tech: "Vue.js/Nuxt, Tailwind CSS, REST APIs, Firebase",
       badge: "Proprietary Project",
       description:
         "Enterprise serverless cloud platform where I contributed to frontend features, authentication flows, deployment interfaces, project management, and runtime configuration.",
@@ -46,7 +46,7 @@ function Projects({ setShowProjects }) {
     },
     {
       title: "IntelliToggle",
-      tech: "React, Tailwind CSS, RBAC, REST APIs",
+      tech: "Vue.js/Nuxt, Tailwind CSS, RBAC, REST APIs",
       badge: "Proprietary Project",
       description:
         "Feature flag management platform with work involving admin dashboards, RBAC, and API integration.",
@@ -72,7 +72,11 @@ function Projects({ setShowProjects }) {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 12 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 12 },
+    },
   };
 
   return (
@@ -109,7 +113,12 @@ function Projects({ setShowProjects }) {
           />
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.15, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
             className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-100/80 rounded-full blur-3xl"
           />
         </div>
@@ -166,17 +175,25 @@ function Projects({ setShowProjects }) {
             >
               <div>
                 <div className="flex flex-col gap-3 mb-3">
-                  <span className={`self-start px-3 py-1 rounded-full text-xs font-semibold border ${
-                    project.badge === "Proprietary Project"
-                      ? "bg-sky-50 border-sky-200 text-sky-700"
-                      : "bg-slate-50 border-slate-200 text-slate-600"
-                  }`}>
+                  <span
+                    className={`self-start px-3 py-1 rounded-full text-xs font-semibold border ${
+                      project.badge === "Proprietary Project"
+                        ? "bg-sky-50 border-sky-200 text-sky-700"
+                        : "bg-slate-50 border-slate-200 text-slate-600"
+                    }`}
+                  >
                     {project.badge}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-slate-950">{project.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-slate-950">
+                    {project.title}
+                  </h3>
                 </div>
-                <p className="text-slate-600 text-sm sm:text-base mb-2">{project.tech}</p>
-                <p className="text-slate-500 text-sm sm:text-base">{project.description}</p>
+                <p className="text-slate-600 text-sm sm:text-base mb-2">
+                  {project.tech}
+                </p>
+                <p className="text-slate-500 text-sm sm:text-base">
+                  {project.description}
+                </p>
               </div>
               {project.link && (
                 <a

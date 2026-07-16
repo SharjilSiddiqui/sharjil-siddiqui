@@ -7,23 +7,31 @@ function Skills({ setShowSkills }) {
     frontend: {
       icon: Code2,
       color: "from-sky-500 to-blue-600",
-      items: ["React", "Vue", "Nuxt", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS"]
+      items: [
+        "React",
+        "Vue",
+        "Nuxt",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
     },
     backend: {
       icon: Server,
       color: "from-sky-500 to-blue-600",
-      items: ["Node.js", "Firebase", "REST APIs", "PostgreSQL", "MongoDB"]
+      items: ["Node.js", "Firebase", "REST APIs", "PostgreSQL", "MongoDB"],
     },
     testing: {
       icon: ShieldCheck,
       color: "from-sky-500 to-blue-600",
-      items: ["API Testing", "QA", "Regression Testing", "Postman", "cURL"]
+      items: ["API Testing", "QA", "Regression Testing", "Postman", "cURL"],
     },
     tools: {
       icon: Wrench,
       color: "from-sky-500 to-blue-600",
-      items: ["Git", "GitHub", "GitLab", "Vite", "VS Code"]
-    }
+      items: ["Git", "GitHub", "GitLab", "Vite", "VS Code"],
+    },
   };
 
   const containerVariants = {
@@ -32,9 +40,9 @@ function Skills({ setShowSkills }) {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const cardVariants = {
@@ -46,9 +54,9 @@ function Skills({ setShowSkills }) {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   const itemVariants = {
@@ -56,8 +64,8 @@ function Skills({ setShowSkills }) {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
@@ -106,14 +114,17 @@ function Skills({ setShowSkills }) {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold 
+          <h2
+            className="text-4xl sm:text-5xl md:text-6xl font-bold 
                          bg-gradient-to-r from-slate-950 via-sky-600 to-blue-700 
-                         bg-clip-text text-transparent mb-3">
+                         bg-clip-text text-transparent mb-3"
+          >
             My Skills
           </h2>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-sky-400 to-blue-600 rounded-full" />
           <p className="mt-4 text-slate-600 text-sm sm:text-base">
-            Tools I use across frontend development, API integration, and release validation.
+            Tools I use across software development, API integration, and
+            release validation.
           </p>
         </motion.div>
 
@@ -135,14 +146,18 @@ function Skills({ setShowSkills }) {
                 className="relative group"
               >
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${skillGroup.color} opacity-0 rounded-2xl 
-                                group-hover:opacity-5 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${skillGroup.color} opacity-0 rounded-2xl 
+                                group-hover:opacity-5 transition-opacity duration-500`}
+                />
+
                 {/* Card */}
-                <div className="relative bg-white backdrop-blur-md border border-slate-200
+                <div
+                  className="relative bg-white backdrop-blur-md border border-slate-200
                                 rounded-2xl p-6 shadow-sm
                                 hover:bg-white hover:border-sky-300 hover:shadow-lg
-                                transition-all duration-300">
+                                transition-all duration-300"
+                >
                   {/* Icon & Title */}
                   <div className="flex items-center gap-3 mb-5">
                     <motion.div
@@ -169,10 +184,14 @@ function Skills({ setShowSkills }) {
                         whileHover={{ x: 5 }}
                         className="flex items-center group/item"
                       >
-                        <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${skillGroup.color} 
-                                        mr-3 group-hover/item:scale-150 transition-transform`} />
-                        <span className="text-sm md:text-base text-slate-600 
-                                       group-hover/item:text-slate-950 transition-colors">
+                        <span
+                          className={`w-2 h-2 rounded-full bg-gradient-to-r ${skillGroup.color} 
+                                        mr-3 group-hover/item:scale-150 transition-transform`}
+                        />
+                        <span
+                          className="text-sm md:text-base text-slate-600 
+                                       group-hover/item:text-slate-950 transition-colors"
+                        >
                           {item}
                         </span>
                       </motion.li>
