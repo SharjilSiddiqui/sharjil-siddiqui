@@ -170,7 +170,7 @@ function About({ setShowProjects, setShowContact }) {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="text-sm sm:text-base md:text-lg text-slate-500 leading-relaxed"
               >
-                I am pursuing a B.Tech in AI & Data Science and currently work
+                I have completed B.Tech in AI & Data Science and currently work
                 as a Frontend Engineer Lead at Aortem Inc. My focus is building
                 scalable web applications with clean UI, thoughtful user
                 experience, and reliable release validation in remote
@@ -195,7 +195,7 @@ function About({ setShowProjects, setShowContact }) {
                   View Projects
                 </motion.button>
                 <motion.a
-                  href="/Sharjil_Siddiqui_Resume.txt"
+                  href="/Sharjil_Siddiqui.pdf"
                   download
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.96 }}
