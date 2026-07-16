@@ -36,7 +36,7 @@ function Contact({ setShowContact }) {
       icon: Download,
       label: "Resume",
       value: "Download Sharjil Siddiqui resume",
-      link: "/Sharjil_Siddiqui_Resume.txt",
+      link: "/Sharjil_Siddiqui.pdf",
       color: "from-cyan-400 to-sky-500",
     },
   ];
